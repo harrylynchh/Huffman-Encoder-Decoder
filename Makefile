@@ -4,8 +4,8 @@
 ### Author:  Harry Lynch
 
 CXX = clang++
-CXXFLAGS = -g3 -Wall -Wextra -Wpedantic -Wshadow
-LDFLAGS = -g3
+CXXFLAGS = -g3 -Wall -Wextra -Wpedantic -Wshadow -fPIC
+LDFLAGS = -g3 -no-pie
 
 zap: main.o HuffmanCoder.o HuffmanTreeNode.o ZapUtil.o
 	${CXX} ${LDFLAGS} -o zap main.o HuffmanCoder.o HuffmanTreeNode.o ZapUtil.o
